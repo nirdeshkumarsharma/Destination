@@ -161,6 +161,11 @@
             <groupId>org.springframework.integration</groupId>
             <artifactId>spring-integration-mongodb</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-sync</artifactId>
+            <version>4.7.1</version>
+        </dependency>
     </dependencies>
     
 </project>
