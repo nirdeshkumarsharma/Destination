@@ -12,7 +12,7 @@ xmlns:int="http://www.springframework.org/schema/integration">
 	<integration:channel id="requestChannel"/>
     <integration:channel id="outputChannel"/>
 	<mongo:db-factory id="mongoDbFactory" dbname = "test"/>
- <int-mongodb:inbound-channel-adapter id="simpleInboundAdapter" channel="splittingChannel" collection-name-expression="'data'" query-expression="new BasicQuery('{''address.state'' : ''CA''}')" 
+ <int-mongodb:inbound-channel-adapter id="simpleInboundAdapter" channel="splittingChannel" collection-name-expression="'data'" query-expression="new BasicQuery('{''address.state'' : ''CA''}')" >
 	<int:poller fixed-rate="60000" max-messages-per-poll="1"/>
 </int-mongodb:inbound-channel-adapter>
 <int:splitter input-channel="splittingChannel" output-channel="logger"/>
