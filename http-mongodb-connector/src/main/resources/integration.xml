@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <beans  
+xmlns:int-mongodb="http://www.springframework.org/schema/integration/mongodb"
 xmlns="http://www.springframework.org/schema/beans"
 xmlns:mongo="http://www.springframework.org/schema/data/mongo"
 xmlns:integration="http://www.springframework.org/schema/integration"
