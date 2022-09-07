@@ -12,7 +12,7 @@ xmlns:int-mail="http://www.springframework.org/schema/integration/mail">
 	<integration:channel id="requestChannel"/>
     <integration:channel id="outputChannel"/>
 	<util:properties id="smtpProperties" location="classpath*:/smtp.properties"/>
- <int-mail:outbound-channel-adapter channel="outputChannel" java-mail-properties="smtpProperties" >
+ <int-mail:outbound-channel-adapter channel="outputChannel" java-mail-properties="smtpProperties" password="xxxxx" >
 <int:map-to-object-transformer input-channel="requestChannel" output-channel="outputChannel" type="org.springframework.mail.SimpleMailMessage"/>
 
 </beans>
