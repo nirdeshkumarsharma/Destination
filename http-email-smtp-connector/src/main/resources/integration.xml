@@ -8,7 +8,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:int="http://www.springframework.org/schema/integration"
 xmlns:int-mail="http://www.springframework.org/schema/integration/mail">
- <int-http:inbound-channel-adapter channel="channel1" path="/email" supported-methods="POST" request-payload-type="java.lang.Object" />
+ <int-http:inbound-channel-adapter channel="requestChannel" path="/email" supported-methods="POST" request-payload-type="java.lang.Object" />
 	<integration:channel id="requestChannel"/>
     <integration:channel id="outputChannel"/>
 	<util:properties id="smtpProperties" location="classpath*:/smtp.properties"/>
