@@ -5,11 +5,11 @@
         
     <groupId>com.lti</groupId>
         
-    <artifactId>http-mongodb-outbound-connector</artifactId>
+    <artifactId>mule-to-si</artifactId>
         
     <packaging>jar</packaging>
         
-    <name>http-mongodb-outbound-connector</name>
+    <name>mule-to-si</name>
         
     <version>1.0.0</version>
         

@@ -8,16 +8,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:int="http://www.springframework.org/schema/integration"
 xmlns:int-mail="http://www.springframework.org/schema/integration/mail">
- <int-http:inbound-channel-adapter id="httpInboundAdapter" channel="requestChannel" path="/test" supported-methods="POST" request-payload-type="java.lang.Object" /> 
- <integration:channel id="requestChannel"/>
-    <integration:channel id="outputChannel"/>
- <int-http:outbound-channel-adapter id="httpAdapter" url="https://localhost:8084/outbound" channel="outputChannel"/> 
- <int:service-activator input-channel="requestChannel" method="dummyMethod"> 
-  <bean class="com.lti.DummyServiceActivator"/>  
- </int:service-activator> 
-
- <int:service-activator input-channel="requestChannel" output-channel="outputChannel" method="dummyOutboundMethod"> 
-  <bean class="com.lti.DummyServiceActivator"/>  </int:service-activator> 
+ <int-http:inbound-channel-adapter channel="requestChannel" path="/email" supported-methods="POST" request-payload-type="java.lang.Object" />
 	<util:properties id="smtpProperties" location="classpath*:/smtp.properties"/>
  <int-mail:outbound-channel-adapter channel="outputChannel" java-mail-properties="smtpProperties" password="xxxxx" />
 <int:map-to-object-transformer input-channel="requestChannel" output-channel="outputChannel" type="org.springframework.mail.SimpleMailMessage"/>
