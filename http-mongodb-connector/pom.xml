@@ -5,11 +5,11 @@
         
     <groupId>com.lti</groupId>
         
-    <artifactId>hello</artifactId>
+    <artifactId>http-mongodb-connector</artifactId>
         
     <packaging>jar</packaging>
         
-    <name>hello</name>
+    <name>http-mongodb-connector</name>
         
     <version>1.0.0</version>
         
