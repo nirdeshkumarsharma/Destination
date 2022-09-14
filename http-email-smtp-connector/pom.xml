@@ -5,11 +5,11 @@
         
     <groupId>com.lti</groupId>
         
-    <artifactId>mule-to-si</artifactId>
+    <artifactId>http-email-smtp-connector</artifactId>
         
     <packaging>jar</packaging>
         
-    <name>mule-to-si</name>
+    <name>http-email-smtp-connector</name>
         
     <version>1.0.0</version>
         
