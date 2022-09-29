@@ -13,9 +13,9 @@ xmlns:int="http://www.springframework.org/schema/integration">
     <integration:channel id="outputChannel"/>
 	<mongo:db-factory id="mongoDbFactory" dbname = "test"/>
  <int-mongodb:outbound-channel-adapter id="defaultAdapter" channel="requestChannel" mongodb-factory="mongoDbFactory" />
- <bean id="http-mongodb-outbound-connectorId17" class="com.lti.transformer.DataWeaveTransformer" > 
- <property name="scriptName" value="http-mongodb-outbound-connector17.dwl"/>  
+ <bean id="http-mongodb-outbound-connectorId19" class="com.lti.transformer.DataWeaveTransformer" > 
+ <property name="scriptName" value="http-mongodb-outbound-connector19.dwl"/>  
  </bean> 
-<int:transformer input-channel="requestChannel" output-channel="outputChannel" ref="http-mongodb-outbound-connectorId17"/> 
+<int:transformer input-channel="requestChannel" output-channel="outputChannel" ref="http-mongodb-outbound-connectorId19"/> 
 
 </beans>

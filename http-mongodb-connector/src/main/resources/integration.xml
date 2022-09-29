@@ -18,9 +18,9 @@ xmlns:int="http://www.springframework.org/schema/integration">
 <int:splitter input-channel="splittingChannel" output-channel="logger"/>
 <int:logging-channel-adapter id="logger" level="WARN"/>
 
- <bean id="http-mongodb-connectorId16" class="com.lti.transformer.DataWeaveTransformer" > 
- <property name="scriptName" value="http-mongodb-connector16.dwl"/>  
+ <bean id="http-mongodb-connectorId18" class="com.lti.transformer.DataWeaveTransformer" > 
+ <property name="scriptName" value="http-mongodb-connector18.dwl"/>  
  </bean> 
-<int:transformer input-channel="requestChannel" output-channel="outputChannel" ref="http-mongodb-connectorId16"/> 
+<int:transformer input-channel="requestChannel" output-channel="outputChannel" ref="http-mongodb-connectorId18"/> 
 
 </beans>
